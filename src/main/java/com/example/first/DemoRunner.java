@@ -29,8 +29,7 @@ public class DemoRunner implements CommandLineRunner {
 
         System.out.println("\n=== TESTING RETRY ===");
         try {
-            // This will fail and retry 3 times because api.example.com/registrar doesn't
-            // exist
+
             legacyClient.fetchRegistrarData("999");
         } catch (Exception e) {
             System.out.println("Retry exhausted: " + e.getMessage());
